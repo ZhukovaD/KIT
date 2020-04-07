@@ -1,0 +1,39 @@
+.button {
+  display: block;
+  width: 170px;
+  padding: 10px 20px;
+
+  border:solid 1px transparent;
+  border-radius: 5px;
+
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+
+  background-color: @base-color;
+  color: @text-additional-color;
+  transition-duration: 0.2s;
+
+  &:hover {
+    background-color: @base-color-darker;
+  }
+
+  &:active {
+    color:rgba(@text-additional-color, 0.5);
+  }
+
+  &--alternate{
+    background-color: transparent;
+    border-color: @text-additional-color;
+  }
+
+  &--alternate:hover{
+    background-color: @text-additional-color;
+    color: @text-color;
+  }
+
+  &--alternate:active{
+    color:rgba(@text-color, 0.5);
+  }
+
+}

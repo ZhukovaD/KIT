@@ -1,0 +1,39 @@
+.social__item{
+  margin-right: 8px;
+  border:solid 1px @text-additional-color;
+  border-radius: 3px;
+  opacity: 60%;
+  display: inline-block;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  filter: brightness(0) invert(1);
+
+  &:hover{
+    opacity: 100%;
+  }
+
+  &--vk{
+    background-image: url("../img/vk.svg");
+    background-size: 23px;
+  }
+
+  &--fb{
+    background-image: url("../img/facebook.svg");
+    background-size: 12px;
+  }
+
+  &--inst{
+    background-image: url("../img/instagram.svg");
+    background-size: 19px;
+  }
+}
+
+.social__item a{
+  display: block;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+

@@ -1,0 +1,31 @@
+.site-list{
+  .all-lists;
+}
+
+.site-list__item {
+  min-height: 65px;
+  border-top:solid 1px lightgray;
+  text-align: center;
+}
+
+.site-list__item a{
+  display: block;
+  padding: 21px 0;
+
+  color:@text-color;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover{
+    color:rgba(@text-color, 0.4);
+  }
+
+  &:active{
+    color:rgba(@text-color, 0.2);
+  }
+}

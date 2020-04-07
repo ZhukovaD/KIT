@@ -1,0 +1,46 @@
+.why{
+  width: @mobile-width;
+  margin: 0 auto;
+  padding: 40px 0;
+  background-color: @alternate-section-color;
+  counter-reset: item;
+}
+
+.why__item{
+  padding-left: 100px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  display: block;
+
+  &:before{
+    content: counters(item, "", decimal-leading-zero);
+    counter-increment: item;
+    position: absolute;
+    top:14px;
+    left:20px;
+    color:@base-color;
+    font-weight: 700;
+    font-size: @h3-title-size;
+  }
+
+  &:after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 42px;
+    top:26px;
+    left: 50px;
+    background-color: @text-color;
+  }
+}
+
+.why__title{
+  text-align: left;
+  width: 200px;
+}
+
+.why__description{
+  color:lighten(@text-color, 50%);
+  line-height: 1.3em;
+}

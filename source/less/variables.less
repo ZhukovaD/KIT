@@ -1,16 +1,57 @@
-@base-font:"Helvetica Neue", "Arial", sans-serif;
-@base-color:#068ff7;
-@base-color-darker:darken(@base-color, 8%);
-@base-additional-color:#ffffff;
-@footer-color:#303036;
+//-----ШРИФТЫ-----
+@title-font: "Myriad Pro", "Arial", sans-serif;
+@text-font: "Roboto", "Arial", sans-serif;
 
-@alternate-section-color:#f0f4f8;
-@text-color:#000000;
-@text-additional-color:#ffffff;
-
-@h1-title-size:36px;
-@h2-title-size:28px;
-@h3-title-size:21px;
+//-----ОБЩИЕ ПРАВИЛА ЗАГОЛОВКОВ-----
+@h1-title-size:32px;
+//for desktop h1 is 64px (mobile-size*2)
+@h2-title-size:32px;
+//for desktop h2 is 48px (mobile-size*1.5)
+@h3-title-size:24px;
+//for desktop h3 is also 24px
+@h4-title-size:18px;
+//for desktop h5 is also 18px
 @text-size:16px;
+//for desktop h3 is also 16px
+@text-size--small:14px;
+//for desktop h3 is also 14px
 
+//-----ОБЩИЕ ПРАВИЛА ОТСТУПОВ ДЛЯ <section>, КНОПОК ПОД ТОВАРАМИ И КАРТОЧЕК ТОВАРОВ
+@padding-bottom-section:60px;
+@margin-bottom-item:20px;
+@margin-top-button:35px;
+@padding-left-right-mobile:10px;
+
+//-----БАЗОВЫЕ ЦВЕТА
+@base-color:#3E8CFC;
+@base-color--additional:#1B3BA5;
+@text-color:#000000;
+@text-color--white-text:#ffffff;
+@bg-color:#ffffff;
+@bg-color--footer:#131620;
+@bg-color--dark-section:#F3F5FC;
+@border-color:#D4D7E0;
+
+//-----ГРАДИЕНТ ГЛАВНЫЙ (ДЛЯ КНОПОК И ДР.)
+@gradient-color-light:@base-color;
+@gradient-color-dark:#2E66D3;
+@gradient:linear-gradient(70deg, @gradient-color-dark, @gradient-color-light);
+
+//-----ГРАДИЕНТ ГЛАВНЫЙ ПРИ :hover
+@gradient-color-light--hover:#2D66D3;
+@gradient-color-dark--hover:@base-color--additional;
+@gradient--hover:linear-gradient(70deg, @gradient-color-dark--hover, @gradient-color-light--hover);
+
+//-----ГРАДИЕНТ ДЛЯ КАРТОЧЕК ПОРТФОЛИО
+@gradient-color-light--portfolio:#082146;
+@gradient-color-dark--portfolio:fade(@gradient-color-light--portfolio, 40%);
+@gradient--portfolio:linear-gradient(100deg, @gradient-color-light--portfolio, @gradient-color-dark--portfolio);
+
+//-----РАМКИ ДЛЯ КАРТОЧЕК ТОВАРОВ И ДР.
+@border-width:2px;
+@border-radius:15px;
+
+//-----РАЗМЕРЫ ЭКРАНОВ
 @mobile-width:320px;
+@tablet-width:768px;
+@desktop-width:1280px;

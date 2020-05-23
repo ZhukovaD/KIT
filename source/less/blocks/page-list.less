@@ -1,0 +1,37 @@
+.page-list{
+  .all-lists;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-list__item a{
+  display: inline-block;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 15px;
+
+  border-right: solid 1px @border-color;
+
+  line-height: 1em;
+  text-transform: uppercase;
+  font-size: @text-size;
+
+  cursor: pointer;
+  user-select: none;
+
+  &:hover{
+    color: @base-color;
+  }
+
+  &:active{
+    opacity: 80%;
+  }
+}
+
+.page-list__item--active{
+  color:@base-color;
+
+  & a:hover{
+    text-decoration: none;
+  }
+}

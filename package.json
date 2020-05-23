@@ -2,7 +2,7 @@
   "name": "kit-service",
   "version": "1.0.0",
   "private": true,
-  "description": "Сайт IT-решений для бизнеса",
+  "description": "IT solutions for your business",
   "devDependencies": {
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",

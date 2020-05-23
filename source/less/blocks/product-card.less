@@ -1,0 +1,98 @@
+.product-card{
+  position: relative;
+  box-sizing: border-box;
+  height: 320px;
+  width: 300px;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  color:@text-color;
+
+  .border;
+
+  text-align: center;
+  padding: 30px 30px 10px 30px;
+
+  &:not(:last-of-type){
+    margin-bottom: @margin-bottom-item;
+  }
+}
+
+//Стилизация круглой маленькой иконки сверху
+.product-card__icon{
+  margin: 0 auto;
+  margin-bottom: 30px;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background:@gradient;
+
+  & svg{
+    height: 90px;
+    fill:white;
+  }
+}
+
+.product-card__description{
+  line-height: 1.5em;
+}
+
+//Скрываем большую декоративную иконку
+.product-card__icon--hover{
+  display: none;
+
+  & svg{
+    display: none;
+  }
+}
+
+
+//ПОВЕДЕНИЕ КАРТОЧКИ ПРИ НАВЕДЕНИИ
+.product-card:hover{
+  color: white;
+  background:@gradient;
+  border-color: @bg-color;
+  z-index: 1;
+
+  //красим ссылку в белый
+  & .product-card__link-more{
+    color:white;
+
+    &::after{
+      border-color: white;
+    }
+  }
+
+  //новая стилизация маленькой иконки
+  & .product-card__icon{
+    background: white;
+    z-index: 10;
+
+    & svg{
+      fill: @base-color;
+    }
+  }
+}
+
+//СТИЛИЗАЦИЯ И ДЕМОНСТРАЦИЯ БОЛЬШОЙ ДЕКОРАТИВНОЙ ИКОНКИ
+.product-card:hover .product-card__icon--hover{
+  background: none;
+  background-color: transparent;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  bottom: -250px;
+  right: -200px;
+  opacity: 10%;
+  display: block;
+  z-index: -5;
+
+  & svg{
+    height: 500px;
+    width: 500px;
+    fill: white;
+    display: block;
+  }
+}
+
+

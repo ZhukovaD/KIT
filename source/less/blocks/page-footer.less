@@ -1,22 +1,66 @@
 .page-footer{
   width: @mobile-width;
   margin: 0 auto;
-  padding: 20px 20px 10px 20px;
-  background-color: @footer-color;
+  background-color: @bg-color--footer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__company{
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.page-footer__logo{
+  display: block;
+  margin-bottom: 20px;
 }
 
 .page-footer__logo-image{
-  filter: brightness(150%) grayscale(100%);
+  filter: grayscale(90%) brightness(1.1);
+
+  &:hover{
+    opacity: 50%;
+  }
 }
 
-.page-footer__about{
-  color: @text-additional-color;
-  opacity: 60%;
-  padding-bottom: 10px;
+.page-footer__contact{
+  text-align: left;
+  font-size: @text-size--small;
+  color: @text-color--white-text;
+  opacity: 70%;
+  line-height: 2em;
 }
 
 .page-footer__social{
-  .all-lists;
-  margin-top: 10px;
-  margin-bottom: 80px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+}
+
+.page-footer__feedback{
+  display: none;
+}
+
+.page-footer__copyright{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 10px 40px 10px;
+
+  font-size: @text-size--small;
+  text-align: center;
+  border-top:solid 1px @border-color;
+  opacity: 70%;
+}
+
+.page-footer__dev-link{
+  text-decoration: none;
+  display: block;
+  color:@text-color--white-text;
 }

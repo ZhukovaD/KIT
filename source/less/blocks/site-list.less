@@ -1,31 +1,35 @@
 .site-list{
   .all-lists;
+  background-color: @bg-color;
+  width: 100%;
 }
 
-.site-list__item {
-  min-height: 65px;
-  border-top:solid 1px lightgray;
-  text-align: center;
+.site-list__item{
+  border-bottom: solid 1px @border-color;
+
+  &:first-of-type{
+    border-top: solid 1px @border-color;
+  }
+
+  &:active{
+    border-color: @bg-color;
+  }
 }
 
 .site-list__item a{
   display: block;
-  padding: 21px 0;
-
-  color:@text-color;
-
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1em;
-  text-transform: uppercase;
   text-decoration: none;
+  padding: 20px 0;
+  color: @text-color;
   cursor: pointer;
+  user-select: none;
 
   &:hover{
-    color:rgba(@text-color, 0.4);
+    color:@base-color;
   }
 
   &:active{
-    color:rgba(@text-color, 0.2);
+    color:@text-color--white-text;
+    background-color: @base-color;
   }
 }

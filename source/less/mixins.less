@@ -3,3 +3,17 @@
   padding: 0;
   list-style: none;
 }
+
+.border() {
+  box-sizing: border-box;
+  border:solid @border-width @border-color;
+  border-radius: @border-radius;
+}
+
+.section-rules(){
+  width: @mobile-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 @padding-left-right-mobile;
+  padding-bottom: @padding-bottom-section;
+}

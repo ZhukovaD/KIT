@@ -1,0 +1,202 @@
+.button {
+  min-width: 140px;
+  padding: 14px 20px;
+
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  text-decoration: none;
+  text-align: center;
+  font-family: @text-font;
+  font-weight: normal;
+
+
+  transition-duration: 0.2s;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+//------------------------//PRIMARY------------------------
+.button--primary{
+  position: relative;
+  background: transparent;
+  color: @text-color--white-text;
+  transition: 0.2s;
+  z-index: 1;
+
+  &::before{
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: @gradient;
+    z-index: -1;
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: @gradient--hover;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:hover::after{
+    transition: inherit;
+    opacity: 100;
+  }
+
+  &:active{
+    color:rgba(255,255,255,0.5);
+  }
+}
+
+//------------------------//PRIMARY-WHITE------------------------
+.button--primary-white{
+  background-color: white;
+  color:@base-color;
+
+  &:hover{
+    color:rgba(255,255,255,1);
+    background-color: @base-color--additional;
+  }
+
+  &:active{
+    color:rgba(255,255,255,0.5);
+    background-color: darken(@base-color--additional, 10%);
+  }
+}
+
+//------------------------//SECONDARY------------------------
+.button--secondary{
+  padding: 13px 19px;
+  color:@base-color--additional;
+  background-color: transparent;
+  border:solid 1px @base-color--additional;
+
+  &:hover{
+    color:rgba(255,255,255,1);
+    background-color: @base-color--additional;
+  }
+
+  &:active{
+    color:rgba(255,255,255,0.5);
+    background-color:darken(@base-color--additional, 10%);
+  }
+}
+
+//------------------------//SECONDARY-WHITE------------------------
+.button--secondary-white{
+  padding: 13px 19px;
+  color:white;
+  background-color: transparent;
+  border:solid 1px white;
+
+  &:hover{
+    color:@base-color;
+    background-color: white;
+  }
+
+  &:active{
+    opacity: 50%;
+  }
+}
+
+//------------------------//КРУГЛАЯ КНОПКА СО СТРЕЛКОЙ------------------------
+.button--round-arrow {
+  display: block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: white;
+
+  &::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    top:50%;
+    left:50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    background-color: @base-color;
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top:50%;
+    left:50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    margin-left: 3px;
+    border:solid 2px @base-color;
+    border-left-width: 0;
+    border-bottom-width: 0;
+  }
+}
+
+.button--round-arrow:hover{
+  background-color: @base-color--additional;
+
+  &::after{
+    border-color: white;
+  }
+
+  &::before{
+    background-color: white;
+  }
+}
+
+.button--round-arrow:active{
+  background-color: darken(@base-color--additional, 10%);
+
+  &::after,
+  &::before{
+    opacity: 80%;
+  }
+}
+
+//------------------------//LINK------------------------
+.link{
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+  color:@base-color;
+  cursor: pointer;
+  user-select: none;
+
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 25%;
+    right: -10px;
+    height: 5px;
+    width: 5px;
+    border:solid 1.42px @base-color;
+    transform: rotate(45deg);
+    border-bottom-width: 0;
+    border-left-width: 0;
+  }
+
+  &:hover{
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:active &::after{
+    opacity: 50%;
+  }
+}
